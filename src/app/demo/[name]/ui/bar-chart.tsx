@@ -60,7 +60,14 @@ export function BarChartComponent() {
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip content={<ChartTooltipContent />} />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend
+              content={(props) => (
+                <ChartLegendContent
+                  payload={props.payload}
+                  verticalAlign={props.verticalAlign}
+                />
+              )}
+            />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
             <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
           </BarChart>
