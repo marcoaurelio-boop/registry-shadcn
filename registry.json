@@ -235,6 +235,7 @@
         "https://registry-starter.vercel.app/r/theme.json",
         "https://registry-starter.vercel.app/r/logo.json"
       ],
+      "dependencies": ["zod", "@hookform/resolvers", "react-hook-form"],
       "files": [
         {
           "path": "src/components/login.tsx",
@@ -338,6 +339,7 @@
       "registryDependencies": [
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["zod"],
       "files": [
         {
           "path": "src/components/product-grid.tsx",
@@ -351,6 +353,30 @@
           "path": "src/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "catlife-posts",
+      "type": "registry:lib",
+      "title": "Catlife Posts",
+      "description": "Server-side function, API route handler, and client hook to fetch Catlife blog posts with caching",
+      "registryDependencies": [],
+      "dependencies": ["zod"],
+      "files": [
+        {
+          "path": "src/lib/catlife-posts.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/app/api/catlife-posts/route.ts",
+          "type": "registry:file",
+          "target": "app/api/catlife-posts/route.ts"
+        },
+        {
+          "path": "src/hooks/use-catlife-posts.ts",
+          "type": "registry:file",
+          "target": "hooks/use-catlife-posts.ts"
         }
       ]
     },
@@ -465,6 +491,7 @@
         "calendar",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["react-day-picker"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -499,6 +526,7 @@
         "chart",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["recharts"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -533,6 +561,7 @@
         "data-table",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["@tanstack/react-table"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -550,6 +579,7 @@
         "date-picker",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["react-day-picker", "date-fns"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -703,6 +733,7 @@
         "sonner",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
+      "dependencies": ["sonner"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
