@@ -42,6 +42,12 @@ import { tabs } from "@/app/demo/[name]/ui/tabs";
 import { toggleGroup } from "@/app/demo/[name]/ui/toggle-group";
 import { tooltip } from "@/app/demo/[name]/ui/tooltip";
 
+// catlife demos
+import { CatlifeButtonComponent } from "@/app/demo/[name]/ui/catlife-button";
+import { CatlifeCardComponent } from "@/app/demo/[name]/ui/catlife-card";
+import { CatlifeCarouselComponent } from "@/app/demo/[name]/ui/catlife-carousel";
+import { PillContainerComponent } from "@/app/demo/[name]/ui/pill-container";
+
 interface Demo {
   name: string; // this must match the `registry.json` name
   components?: {
@@ -91,4 +97,30 @@ export const demos: { [name: string]: Demo } = {
   tabs,
   "toggle-group": toggleGroup,
   tooltip,
+
+  // catlife
+  "catlife-button": {
+    name: "catlife-button",
+    components: {
+      Example: <CatlifeButtonComponent />,
+    },
+  },
+  "catlife-card": {
+    name: "catlife-card",
+    components: {
+      Example: <CatlifeCardComponent />,
+    },
+  },
+  "catlife-carousel": {
+    name: "catlife-carousel",
+    components: {
+      Example: <CatlifeCarouselComponent />,
+    },
+  },
+  "pill-container": {
+    name: "pill-container",
+    components: {
+      Example: <PillContainerComponent />,
+    },
+  },
 };
