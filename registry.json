@@ -800,6 +800,74 @@
           "target": "app/layout.tsx"
         }
       ]
+    },
+    {
+      "name": "catlife-button",
+      "type": "registry:ui",
+      "title": "Catlife Button",
+      "description": "A custom button component with Catlife branding and interactive shadow effects.",
+      "registryDependencies": [
+        "catlife-button",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "catlife-card",
+      "type": "registry:ui",
+      "title": "Catlife Card",
+      "description": "A custom card component with Catlife styling and rounded corners.",
+      "registryDependencies": [
+        "catlife-card",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "catlife-carousel",
+      "type": "registry:ui",
+      "title": "Catlife Carousel",
+      "description": "An interactive carousel component with smooth animations and pagination dots.",
+      "registryDependencies": [
+        "catlife-carousel",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pill-container",
+      "type": "registry:ui",
+      "title": "Pill Container",
+      "description": "A glassmorphism-style container with rounded pill shape for floating UI elements.",
+      "registryDependencies": [
+        "pill-container",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     }
   ]
 }
