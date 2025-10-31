@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-posts",
+  "type": "registry:lib",
+  "title": "Catlife Posts",
+  "description": "Server-side function, API route handler, and client hook to fetch Catlife blog posts with caching",
+  "dependencies": [
+    "zod"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/lib/catlife-posts.ts",
+      "content": "import { z } from \"zod\";\n\nconst CATLIFE_API_URL =\n  \"https://sydle-ui-dev.sydle.one/api/1/main/exemplosJose/ExampleAPI/getCatlifeBlogContent\";\n\nconst CatlifePostSchema = z.object({\n  tag: z.string(),\n  titulo: z.string(),\n  data: z.string(),\n});\n\nexport type CatlifePost = z.infer<typeof CatlifePostSchema>;\n\nexport async function getCatlifePosts(): Promise<CatlifePost[]> {\n  try {\n    const response = await fetch(CATLIFE_API_URL, {\n      // Cache on the server for 10 minutes; allow SWR\n      next: { revalidate: 600 },\n      headers: {\n        accept: \"application/json\",\n      },\n    });\n\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch catlife posts\");\n    }\n\n    const data = await response.json();\n\n    return z.array(CatlifePostSchema).parse(data);\n  } catch (error) {\n    if (error instanceof z.ZodError) {\n      console.error(\"Validation error:\", error.issues);\n    } else {\n      console.error(\"Error fetching catlife posts:\", error);\n    }\n    throw error;\n  }\n}\n\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "src/app/api/catlife-posts/route.ts",
+      "content": "import { NextResponse } from \"next/server\";\n\nimport { getCatlifePosts } from \"@/lib/catlife-posts\";\n\nexport async function GET() {\n  try {\n    const posts = await getCatlifePosts();\n\n    return NextResponse.json(posts, {\n      headers: {\n        \"Cache-Control\": \"s-maxage=600, stale-while-revalidate=300\",\n      },\n    });\n  } catch (error) {\n    console.error(\"Error in API route:\", error);\n    return NextResponse.json(\n      { error: \"Failed to fetch catlife posts\" },\n      { status: 500 },\n    );\n  }\n}\n\n",
+      "type": "registry:file",
+      "target": "app/api/catlife-posts/route.ts"
+    },
+    {
+      "path": "src/hooks/use-catlife-posts.ts",
+      "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\n\nimport type { CatlifePost } from \"@/lib/catlife-posts\";\n\ninterface UseCatlifePostsResult {\n  posts: CatlifePost[];\n  isLoading: boolean;\n  error: Error | null;\n}\n\nexport function useCatlifePosts(\n  apiUrl: string = \"/api/catlife-posts\",\n): UseCatlifePostsResult {\n  const [posts, setPosts] = useState<CatlifePost[]>([]);\n  const [isLoading, setIsLoading] = useState<boolean>(true);\n  const [error, setError] = useState<Error | null>(null);\n\n  useEffect(() => {\n    let isMounted = true;\n\n    async function fetchPosts() {\n      try {\n        setIsLoading(true);\n        setError(null);\n\n        const response = await window.fetch(apiUrl);\n\n        if (!response.ok) {\n          throw new Error(`Failed to fetch posts: ${response.statusText}`);\n        }\n\n        const data = await response.json();\n\n        if (isMounted) {\n          setPosts(data);\n        }\n      } catch (err) {\n        if (isMounted) {\n          setError(err instanceof Error ? err : new Error(\"Unknown error\"));\n        }\n      } finally {\n        if (isMounted) {\n          setIsLoading(false);\n        }\n      }\n    }\n\n    fetchPosts();\n\n    return () => {\n      isMounted = false;\n    };\n  }, [apiUrl]);\n\n  return { posts, isLoading, error };\n}\n\n",
+      "type": "registry:file",
+      "target": "hooks/use-catlife-posts.ts"
+    }
+  ]
+}
