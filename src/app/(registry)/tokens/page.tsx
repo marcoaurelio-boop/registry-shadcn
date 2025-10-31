@@ -167,46 +167,6 @@ export default function TokensPage() {
           <ColorBlock name="Sidebar Ring" className="bg-sidebar-ring" />
         </div>
       </section>
-
-      {/* Catlife Theme */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Catlife Theme</h2>
-        <p className="mb-6 text-muted-foreground">
-          Catlife color tokens used to theme the registry.
-        </p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock name="Catlife Background" className="bg-catlife-background" />
-          <ColorBlock name="Catlife Background Alt" className="bg-catlife-background-alt" />
-          <ColorBlock name="Catlife Surface" className="bg-catlife-surface" />
-          <ColorBlock name="Catlife Border" className="bg-catlife-border" />
-        </div>
-      </section>
-
-      {/* Catlife Primary */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Catlife Primary</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <ColorBlock name="Primary" className="bg-catlife-primary" />
-          <ColorBlock name="Primary Hover" className="bg-catlife-primary-hover" />
-          <ColorBlock name="Primary Active" className="bg-catlife-primary-active" />
-          <ColorBlock name="Primary Light" className="bg-catlife-primary-light" />
-          <ColorBlock name="Primary Lightest" className="bg-catlife-primary-lightest" />
-          <ColorBlock name="Accent Success" className="bg-catlife-accent-success" />
-        </div>
-      </section>
-
-      {/* Catlife Text */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Catlife Text</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <ColorBlock name="Text Primary" className="bg-catlife-text-primary" />
-          <ColorBlock name="Text Secondary" className="bg-catlife-text-secondary" />
-          <ColorBlock name="Text Muted" className="bg-catlife-text-muted" />
-          <ColorBlock name="Text Inverse" className="bg-catlife-text-inverse" />
-          <ColorBlock name="Text Variant 1" className="bg-catlife-text-variant-1" />
-          <ColorBlock name="Text Variant 2" className="bg-catlife-text-variant-2" />
-        </div>
-      </section>
     </div>
   );
 }

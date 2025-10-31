@@ -4,36 +4,34 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Semantic tokens map to Catlife by default */
-  --background: var(--catlife-background);
-  --foreground: var(--catlife-text-primary);
+  --background: oklch(0.97 0.01 80.72);
+  --foreground: oklch(0.3 0.04 30.2);
 
-  --card: var(--catlife-surface);
-  --card-foreground: var(--catlife-text-primary);
+  --card: oklch(0.97 0.01 80.72);
+  --card-foreground: oklch(0.3 0.04 30.2);
 
-  --popover: var(--catlife-surface);
-  --popover-foreground: var(--catlife-text-primary);
+  --popover: oklch(0.97 0.01 80.72);
+  --popover-foreground: oklch(0.3 0.04 30.2);
 
-  --primary: var(--catlife-primary);
-  --primary-foreground: var(--catlife-text-inverse);
+  --primary: oklch(0.52 0.13 144.17);
+  --primary-foreground: oklch(1.0 0 0);
 
-  --secondary: var(--catlife-primary-light);
-  --secondary-foreground: var(--catlife-text-primary);
+  --secondary: oklch(0.96 0.02 147.64);
+  --secondary-foreground: oklch(0.43 0.12 144.31);
 
-  --muted: var(--catlife-background-alt);
-  --muted-foreground: var(--catlife-text-muted);
+  --muted: oklch(0.94 0.01 74.42);
+  --muted-foreground: oklch(0.45 0.05 39.21);
 
-  --accent: var(--catlife-primary-light);
-  --accent-foreground: var(--catlife-text-primary);
+  --accent: oklch(0.9 0.05 146.04);
+  --accent-foreground: oklch(0.43 0.12 144.31);
 
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
+  --destructive: oklch(0.54 0.19 26.72);
+  --destructive-foreground: oklch(1.0 0 0);
 
-  --border: var(--catlife-border);
-  --input: var(--catlife-border);
-  --ring: var(--catlife-primary);
+  --border: oklch(0.88 0.02 74.64);
+  --input: oklch(0.88 0.02 74.64);
+  --ring: oklch(0.52 0.13 144.17);
 
-  /* Keep charts and sidebar as-is for now; can be themed later */
   --chart-1: oklch(0.67 0.16 144.21);
   --chart-2: oklch(0.58 0.14 144.18);
   --chart-3: oklch(0.52 0.13 144.17);
@@ -49,71 +47,38 @@
   --sidebar-border: oklch(0.88 0.02 74.64);
   --sidebar-ring: oklch(0.52 0.13 144.17);
 
-  --radius: var(--catlife-radius);
-
-  /* Adding Catlife custom colors while preserving shadcn/ui defaults */
-
-  /* Catlife Primary Colors - Orange Family */
-  --catlife-primary: #f49834;
-  --catlife-primary-hover: #f99830;
-  --catlife-primary-active: #f27100;
-  --catlife-primary-light: #ffd094;
-  --catlife-primary-lightest: #ffeed6;
-
-  /* Catlife Background Colors */
-  --catlife-background: #fffaf4;
-  --catlife-background-alt: #fffaf3;
-  --catlife-surface: #ffffff;
-
-  /* Catlife Text Colors */
-  --catlife-text-primary: #161616;
-  --catlife-text-secondary: #1c1b1f;
-  --catlife-text-muted: #292625;
-  --catlife-text-inverse: #ffffff;
-  --catlife-text-variant-1: #151515;
-  --catlife-text-variant-2: #161617;
-
-  /* Catlife Accent Colors */
-  --catlife-accent-success: #10b981;
-
-  /* Catlife Border */
-  --catlife-border: #161616;
-  --catlife-radius: 1.5rem;
-
-  /* Added Catlife font token */
-  --catlife-font-primary: "Roc Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius: 0.5rem;
 }
 
 .dark {
-  --background: var(--catlife-background);
-  --foreground: var(--catlife-text-primary);
+  --background: oklch(0.15 0.01 74.42);
+  --foreground: oklch(0.95 0.02 80.72);
 
-  --card: var(--catlife-surface);
-  --card-foreground: var(--catlife-text-primary);
+  --card: oklch(0.12 0.01 80.72);
+  --card-foreground: oklch(0.95 0.02 80.72);
 
-  --popover: var(--catlife-surface);
-  --popover-foreground: var(--catlife-text-primary);
+  --popover: oklch(0.12 0.01 80.72);
+  --popover-foreground: oklch(0.95 0.02 80.72);
 
-  --primary: var(--catlife-primary);
-  --primary-foreground: var(--catlife-text-inverse);
+  --primary: oklch(0.58 0.15 144.17);
+  --primary-foreground: oklch(0.09 0.01 80.72);
 
-  --secondary: var(--catlife-primary-light);
-  --secondary-foreground: var(--catlife-text-primary);
+  --secondary: oklch(0.15 0.02 147.64);
+  --secondary-foreground: oklch(0.65 0.12 144.31);
 
-  --muted: var(--catlife-background-alt);
-  --muted-foreground: var(--catlife-text-muted);
+  --muted: oklch(0.18 0.01 74.42);
+  --muted-foreground: oklch(0.65 0.03 74.42);
 
-  --accent: var(--catlife-primary-light);
-  --accent-foreground: var(--catlife-text-primary);
+  --accent: oklch(0.22 0.04 146.04);
+  --accent-foreground: oklch(0.65 0.12 144.31);
 
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
+  --destructive: oklch(0.62 0.22 26.72);
+  --destructive-foreground: oklch(0.95 0.02 80.72);
 
-  --border: var(--catlife-border);
-  --input: var(--catlife-border);
-  --ring: var(--catlife-primary);
+  --border: oklch(0.22 0.02 74.64);
+  --input: oklch(0.22 0.02 74.64);
+  --ring: oklch(0.58 0.15 144.17);
 
-  /* Keep chart/sidebar dark defaults */
   --chart-1: oklch(0.72 0.16 144.21);
   --chart-2: oklch(0.63 0.14 144.18);
   --chart-3: oklch(0.58 0.15 144.17);
@@ -128,85 +93,6 @@
   --sidebar-accent-foreground: oklch(0.65 0.12 144.31);
   --sidebar-border: oklch(0.22 0.02 74.64);
   --sidebar-ring: oklch(0.58 0.15 144.17);
-}
-
-/* Named themes for consumers */
-.theme-catlife,
-.catlife-theme {
-  --background: var(--catlife-background);
-  --foreground: var(--catlife-text-primary);
-  --card: var(--catlife-surface);
-  --card-foreground: var(--catlife-text-primary);
-  --popover: var(--catlife-surface);
-  --popover-foreground: var(--catlife-text-primary);
-
-  --primary: var(--catlife-primary);
-  --primary-foreground: var(--catlife-text-inverse);
-
-  --secondary: var(--catlife-primary-light);
-  --secondary-foreground: var(--catlife-text-primary);
-
-  --muted: var(--catlife-background-alt);
-  --muted-foreground: var(--catlife-text-muted);
-
-  --accent: var(--catlife-primary-light);
-  --accent-foreground: var(--catlife-text-primary);
-
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-
-  --border: var(--catlife-border);
-  --input: var(--catlife-border);
-  --ring: var(--catlife-primary);
-
-  --radius: var(--catlife-radius);
-
-  font-family: var(--catlife-font-primary);
-}
-
-.theme-default {
-  /* Original shadcn defaults (light) */
-  --background: oklch(0.97 0.01 80.72);
-  --foreground: oklch(0.3 0.04 30.2);
-  --card: oklch(0.97 0.01 80.72);
-  --card-foreground: oklch(0.3 0.04 30.2);
-  --popover: oklch(0.97 0.01 80.72);
-  --popover-foreground: oklch(0.3 0.04 30.2);
-  --primary: oklch(0.52 0.13 144.17);
-  --primary-foreground: oklch(1.0 0 0);
-  --secondary: oklch(0.96 0.02 147.64);
-  --secondary-foreground: oklch(0.43 0.12 144.31);
-  --muted: oklch(0.94 0.01 74.42);
-  --muted-foreground: oklch(0.45 0.05 39.21);
-  --accent: oklch(0.9 0.05 146.04);
-  --accent-foreground: oklch(0.43 0.12 144.31);
-  --destructive: oklch(0.54 0.19 26.72);
-  --destructive-foreground: oklch(1.0 0 0);
-  --border: oklch(0.88 0.02 74.64);
-  --input: oklch(0.88 0.02 74.64);
-  --ring: oklch(0.52 0.13 144.17);
-}
-
-.dark.theme-default {
-  --background: oklch(0.15 0.01 74.42);
-  --foreground: oklch(0.95 0.02 80.72);
-  --card: oklch(0.12 0.01 80.72);
-  --card-foreground: oklch(0.95 0.02 80.72);
-  --popover: oklch(0.12 0.01 80.72);
-  --popover-foreground: oklch(0.95 0.02 80.72);
-  --primary: oklch(0.58 0.15 144.17);
-  --primary-foreground: oklch(0.09 0.01 80.72);
-  --secondary: oklch(0.15 0.02 147.64);
-  --secondary-foreground: oklch(0.65 0.12 144.31);
-  --muted: oklch(0.18 0.01 74.42);
-  --muted-foreground: oklch(0.65 0.03 74.42);
-  --accent: oklch(0.22 0.04 146.04);
-  --accent-foreground: oklch(0.65 0.12 144.31);
-  --destructive: oklch(0.62 0.22 26.72);
-  --destructive-foreground: oklch(0.95 0.02 80.72);
-  --border: oklch(0.22 0.02 74.64);
-  --input: oklch(0.22 0.02 74.64);
-  --ring: oklch(0.58 0.15 144.17);
 }
 
 @theme inline {
@@ -250,34 +136,14 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Catlife color tokens */
-  --color-catlife-primary: var(--catlife-primary);
-  --color-catlife-primary-hover: var(--catlife-primary-hover);
-  --color-catlife-primary-active: var(--catlife-primary-active);
-  --color-catlife-primary-light: var(--catlife-primary-light);
-  --color-catlife-primary-lightest: var(--catlife-primary-lightest);
-  --color-catlife-background: var(--catlife-background);
-  --color-catlife-background-alt: var(--catlife-background-alt);
-  --color-catlife-surface: var(--catlife-surface);
-  --color-catlife-text-primary: var(--catlife-text-primary);
-  --color-catlife-text-secondary: var(--catlife-text-secondary);
-  --color-catlife-text-muted: var(--catlife-text-muted);
-  --color-catlife-text-inverse: var(--catlife-text-inverse);
-  --color-catlife-text-variant-1: var(--catlife-text-variant-1);
-  --color-catlife-text-variant-2: var(--catlife-text-variant-2);
-  --color-catlife-accent-success: var(--catlife-accent-success);
-  --color-catlife-border: var(--catlife-border);
-
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
-  --font-catlife-primary: var(--catlife-font-primary);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-catlife: var(--catlife-radius);
 
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);
