@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-footer",
+  "type": "registry:ui",
+  "title": "Catlife Footer",
+  "description": "A footer component with multi-column navigation and copyright.",
+  "registryDependencies": [
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

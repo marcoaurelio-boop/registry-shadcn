@@ -34,7 +34,7 @@ export function useCatlifePosts(
         const data = await response.json();
 
         if (isMounted) {
-          setPosts(data);
+          setPosts(data as CatlifePost[]);
         }
       } catch (err) {
         if (isMounted) {

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-testimonials",
+  "type": "registry:ui",
+  "title": "Catlife Testimonials",
+  "description": "A testimonials section with banner ribbon and testimonial cards.",
+  "registryDependencies": [
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

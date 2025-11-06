@@ -899,6 +899,105 @@
           "target": "app/layout.tsx"
         }
       ]
+    },
+    {
+      "name": "catlife-navbar",
+      "type": "registry:ui",
+      "title": "Catlife Navbar",
+      "description": "A sticky navigation bar component with menu, logo, and user actions.",
+      "registryDependencies": [
+        "catlife-button",
+        "avatar",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-hero",
+      "type": "registry:ui",
+      "title": "Catlife Hero",
+      "description": "A hero section component with title, subtitle, image, and floating form card.",
+      "registryDependencies": [
+        "catlife-button",
+        "input",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-info-card",
+      "type": "registry:ui",
+      "title": "Catlife Info Card",
+      "description": "An information card component with multiple orange variants.",
+      "registryDependencies": [
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-plans-carousel",
+      "type": "registry:ui",
+      "title": "Catlife Plans Carousel",
+      "description": "A carousel component for displaying insurance plans with active/inactive states.",
+      "registryDependencies": [
+        "catlife-button",
+        "catlife-carousel",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-coverage-table",
+      "type": "registry:ui",
+      "title": "Catlife Coverage Table",
+      "description": "A table component displaying insurance coverage information with checkmarks.",
+      "registryDependencies": [
+        "table",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-telemedicine",
+      "type": "registry:ui",
+      "title": "Catlife Telemedicine",
+      "description": "A section component for telemedicine information with image and CTA.",
+      "registryDependencies": [
+        "catlife-button",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-testimonials",
+      "type": "registry:ui",
+      "title": "Catlife Testimonials",
+      "description": "A testimonials section with banner ribbon and testimonial cards.",
+      "registryDependencies": [
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-faq",
+      "type": "registry:ui",
+      "title": "Catlife FAQ",
+      "description": "An FAQ accordion component with illustration support.",
+      "registryDependencies": [
+        "accordion",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "catlife-footer",
+      "type": "registry:ui",
+      "title": "Catlife Footer",
+      "description": "A footer component with multi-column navigation and copyright.",
+      "registryDependencies": [
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": []
     }
   ]
 }

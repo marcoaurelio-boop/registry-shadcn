@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-navbar",
+  "type": "registry:ui",
+  "title": "Catlife Navbar",
+  "description": "A sticky navigation bar component with menu, logo, and user actions.",
+  "registryDependencies": [
+    "catlife-button",
+    "avatar",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

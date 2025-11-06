@@ -46,6 +46,15 @@ import { tooltip } from "@/app/demo/[name]/ui/tooltip";
 import { CatlifeButtonComponent } from "@/app/demo/[name]/ui/catlife-button";
 import { CatlifeCardComponent } from "@/app/demo/[name]/ui/catlife-card";
 import { CatlifeCarouselComponent } from "@/app/demo/[name]/ui/catlife-carousel";
+import { CatlifeCoverageTableComponent } from "@/app/demo/[name]/ui/catlife-coverage-table";
+import { CatlifeFAQComponent } from "@/app/demo/[name]/ui/catlife-faq";
+import { CatlifeFooterComponent } from "@/app/demo/[name]/ui/catlife-footer";
+import { CatlifeHeroComponent } from "@/app/demo/[name]/ui/catlife-hero";
+import { CatlifeInfoCardComponent } from "@/app/demo/[name]/ui/catlife-info-card";
+import { CatlifeNavbarComponent } from "@/app/demo/[name]/ui/catlife-navbar";
+import { CatlifePlansCarouselComponent } from "@/app/demo/[name]/ui/catlife-plans-carousel";
+import { CatlifeTelemedicineComponent } from "@/app/demo/[name]/ui/catlife-telemedicine";
+import { CatlifeTestimonialsComponent } from "@/app/demo/[name]/ui/catlife-testimonials";
 import { PillContainerComponent } from "@/app/demo/[name]/ui/pill-container";
 
 interface Demo {
@@ -115,6 +124,60 @@ export const demos: { [name: string]: Demo } = {
     name: "catlife-carousel",
     components: {
       Example: <CatlifeCarouselComponent />,
+    },
+  },
+  "catlife-coverage-table": {
+    name: "catlife-coverage-table",
+    components: {
+      Example: <CatlifeCoverageTableComponent />,
+    },
+  },
+  "catlife-faq": {
+    name: "catlife-faq",
+    components: {
+      Example: <CatlifeFAQComponent />,
+    },
+  },
+  "catlife-footer": {
+    name: "catlife-footer",
+    components: {
+      Example: <CatlifeFooterComponent />,
+    },
+  },
+  "catlife-hero": {
+    name: "catlife-hero",
+    components: {
+      Example: <CatlifeHeroComponent />,
+    },
+  },
+  "catlife-info-card": {
+    name: "catlife-info-card",
+    components: {
+      Example: <CatlifeInfoCardComponent />,
+    },
+  },
+  "catlife-navbar": {
+    name: "catlife-navbar",
+    components: {
+      Example: <CatlifeNavbarComponent />,
+    },
+  },
+  "catlife-plans-carousel": {
+    name: "catlife-plans-carousel",
+    components: {
+      Example: <CatlifePlansCarouselComponent />,
+    },
+  },
+  "catlife-telemedicine": {
+    name: "catlife-telemedicine",
+    components: {
+      Example: <CatlifeTelemedicineComponent />,
+    },
+  },
+  "catlife-testimonials": {
+    name: "catlife-testimonials",
+    components: {
+      Example: <CatlifeTestimonialsComponent />,
     },
   },
   "pill-container": {

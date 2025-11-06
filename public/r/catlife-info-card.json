@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-info-card",
+  "type": "registry:ui",
+  "title": "Catlife Info Card",
+  "description": "An information card component with multiple orange variants.",
+  "registryDependencies": [
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-hero",
+  "type": "registry:ui",
+  "title": "Catlife Hero",
+  "description": "A hero section component with title, subtitle, image, and floating form card.",
+  "registryDependencies": [
+    "catlife-button",
+    "input",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

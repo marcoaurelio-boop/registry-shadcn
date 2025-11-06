@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-plans-carousel",
+  "type": "registry:ui",
+  "title": "Catlife Plans Carousel",
+  "description": "A carousel component for displaying insurance plans with active/inactive states.",
+  "registryDependencies": [
+    "catlife-button",
+    "catlife-carousel",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

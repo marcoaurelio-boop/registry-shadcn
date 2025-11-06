@@ -37,8 +37,9 @@ export function Carousel({ children, defaultIndex = 0, onSlideChange, className 
               )}
             >
               {React.isValidElement(child)
-                ? React.cloneElement(child as React.ReactElement<{ disabled?: boolean }>, {
+                ? React.cloneElement(child as React.ReactElement<{ disabled?: boolean; "data-active"?: boolean }>, {
                     disabled: !isActive,
+                    "data-active": isActive,
                   })
                 : child}
             </div>

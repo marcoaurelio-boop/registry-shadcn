@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Lato, Montserrat } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
@@ -29,6 +29,17 @@ const MontserratSerif = Montserrat({
   variable: "--font-serif",
 });
 
+const LatoFont = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Lato only supports: 100, 300, 400, 700, 900
+  variable: "--font-lato",
+});
+
+// Note: Roc Grotesk is a commercial font not available on Google Fonts
+// It needs to be self-hosted. Using GeistSans as fallback for now.
+// To use Roc Grotesk, add font files and configure via @font-face in globals.css
+const RocGrotesk = GeistSans; // Fallback - replace with self-hosted Roc Grotesk
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,6 +52,7 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable,
         MontserratSerif.variable,
+        LatoFont.variable,
         "bg-background text-foreground",
       )}
     >

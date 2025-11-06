@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-faq",
+  "type": "registry:ui",
+  "title": "Catlife FAQ",
+  "description": "An FAQ accordion component with illustration support.",
+  "registryDependencies": [
+    "accordion",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

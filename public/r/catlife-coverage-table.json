@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-coverage-table",
+  "type": "registry:ui",
+  "title": "Catlife Coverage Table",
+  "description": "A table component displaying insurance coverage information with checkmarks.",
+  "registryDependencies": [
+    "table",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

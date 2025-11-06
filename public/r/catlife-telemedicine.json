@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catlife-telemedicine",
+  "type": "registry:ui",
+  "title": "Catlife Telemedicine",
+  "description": "A section component for telemedicine information with image and CTA.",
+  "registryDependencies": [
+    "catlife-button",
+    "https://registry-starter.vercel.app/r/theme.json"
+  ],
+  "files": []
+}

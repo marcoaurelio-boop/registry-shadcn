@@ -14,7 +14,7 @@ const CatlifeCard = React.forwardRef<HTMLDivElement, CatlifeCardProps>(
         className={cn(
           "flex flex-col gap-4 rounded-3xl border-2 border-catlife-border p-6 transition-all duration-200",
           // Background variants
-          variant === "default" && "bg-catlife-background",
+          variant === "default" && "bg-catlife-surface",
           variant === "orange" && "bg-catlife-primary",
           // Disabled state
           disabled && "pointer-events-none opacity-60",

@@ -14,6 +14,7 @@ export async function copyToClipboard(value: string) {
 export function MCPTabs({ rootUrl }: { rootUrl: string }) {
   const [tab, setTab] = useState("cursor");
   const [hasCopied, setHasCopied] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const mcp = {
     command: "npx -y shadcn@canary registry:mcp",
@@ -33,12 +34,20 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
   );
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     if (hasCopied) {
       setTimeout(() => {
         setHasCopied(false);
       }, 2000);
     }
   }, [hasCopied]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Tabs value={tab} onValueChange={setTab}>
