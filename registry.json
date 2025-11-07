@@ -594,7 +594,7 @@
       "name": "date-picker",
       "type": "registry:ui",
       "title": "Date Picker",
-      "description": "Displays the path to the current resource using a hierarchy of links.",
+      "description": "A date field component that allows users to enter and edit dates.",
       "registryDependencies": [
         "date-picker",
         "https://registry-shadcn.vercel.app/r/theme.json"
@@ -822,7 +822,7 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "title": "Toggle Group",
-      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "description": "A set of two-state buttons that can be toggled on or off.",
       "registryDependencies": [
         "toggle-group",
         "https://registry-shadcn.vercel.app/r/theme.json"
@@ -922,6 +922,10 @@
       ],
       "files": [
         {
+          "path": "src/components/ui/pill-container.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
@@ -934,7 +938,7 @@
       "title": "Catlife Navbar",
       "description": "A sticky navigation bar component with menu, logo, and user actions.",
       "registryDependencies": [
-        "catlife-button",
+        "https://registry-shadcn.vercel.app/r/catlife-button.json",
         "avatar",
         "https://registry-shadcn.vercel.app/r/theme.json"
       ],
@@ -956,7 +960,7 @@
       "title": "Catlife Hero",
       "description": "A hero section component with title, subtitle, image, and floating form card.",
       "registryDependencies": [
-        "catlife-button",
+        "https://registry-shadcn.vercel.app/r/catlife-button.json",
         "input",
         "https://registry-shadcn.vercel.app/r/theme.json"
       ],
@@ -998,8 +1002,8 @@
       "title": "Catlife Plans Carousel",
       "description": "A carousel component for displaying insurance plans with active/inactive states.",
       "registryDependencies": [
-        "catlife-button",
-        "catlife-carousel",
+        "https://registry-shadcn.vercel.app/r/catlife-button.json",
+        "https://registry-shadcn.vercel.app/r/catlife-carousel.json",
         "https://registry-shadcn.vercel.app/r/theme.json"
       ],
       "files": [
@@ -1041,7 +1045,7 @@
       "title": "Catlife Telemedicine",
       "description": "A section component for telemedicine information with image and CTA.",
       "registryDependencies": [
-        "catlife-button",
+        "https://registry-shadcn.vercel.app/r/catlife-button.json",
         "https://registry-shadcn.vercel.app/r/theme.json"
       ],
       "files": [
