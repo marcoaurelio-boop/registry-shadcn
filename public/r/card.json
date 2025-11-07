@@ -6,7 +6,7 @@
   "description": "Containers for displaying content and actions about a single subject.",
   "registryDependencies": [
     "card",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {

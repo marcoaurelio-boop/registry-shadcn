@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme",
   "type": "registry:theme",
-  "title": "Nature Theme",
-  "description": "A nature theme and styles with greens and browns using Tailwind and shadcn/ui variable names",
+  "title": "CatLife Theme",
+  "description": "CatLife pet insurance theme with custom colors, fonts (Roc Grotesk), and styling using Tailwind and shadcn/ui variable names",
   "dependencies": [
     "radix-ui"
   ],

@@ -6,7 +6,7 @@
   "description": "A glassmorphism-style container with rounded pill shape for floating UI elements.",
   "registryDependencies": [
     "pill-container",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {

@@ -8,8 +8,8 @@
     "badge",
     "button",
     "sidebar",
-    "https://registry-starter.vercel.app/r/sonner.json",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/sonner.json",
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {

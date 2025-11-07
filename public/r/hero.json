@@ -7,7 +7,7 @@
   "registryDependencies": [
     "badge",
     "button",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {

@@ -6,7 +6,19 @@
   "description": "An FAQ accordion component with illustration support.",
   "registryDependencies": [
     "accordion",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
-  "files": []
+  "files": [
+    {
+      "path": "src/components/ui/catlife-faq.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Plus } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"./accordion\";\n\nexport interface FAQItem {\n  question: string;\n  answer: string;\n}\n\nexport interface CatlifeFAQProps extends React.HTMLAttributes<HTMLDivElement> {\n  title?: string;\n  items?: FAQItem[];\n  illustration?: React.ReactNode;\n}\n\nconst CatlifeFAQ = React.forwardRef<HTMLDivElement, CatlifeFAQProps>(\n  (\n    {\n      className,\n      title = \"Perguntas frequentes\",\n      items = [],\n      illustration,\n      ...props\n    },\n    ref,\n  ) => {\n    return (\n      <section\n        ref={ref}\n        className={cn(\"bg-catlife-primary-light px-[24px] py-[80px] gap-[24px] flex flex-col items-center\", className)}\n        {...props}\n      >\n        <div className=\"flex gap-[120px] px-[100px] w-full\">\n          {/* Left Side - Title and Illustration */}\n          <div className=\"flex flex-col flex-1 min-w-0 min-h-0\">\n            <h2 className=\"font-roc-grotesk text-[46px] font-medium leading-[1.05] text-catlife-text-primary w-[347px] whitespace-pre-wrap\">\n              {title}\n            </h2>\n            {illustration && <div>{illustration}</div>}\n          </div>\n\n          {/* Right Side - FAQ Accordion */}\n          <div className=\"flex flex-col flex-1 min-w-0 min-h-0\">\n            <Accordion type=\"single\" collapsible className=\"w-full flex flex-col gap-[16px]\">\n              {items.map((item, index) => (\n                <AccordionItem\n                  key={index}\n                  value={`item-${index}`}\n                  className=\"rounded-[16px] border border-catlife-border bg-catlife-surface p-[16px] last:!border-b\"\n                >\n                  <AccordionTrigger className=\"font-roc-grotesk text-[20px] font-normal leading-[1.1] text-catlife-text-primary hover:no-underline gap-[8px] items-center [&[data-state=open]>svg:last-child]:rotate-45\">\n                    <span className=\"flex-1 min-w-0 min-h-0 leading-[1.1] whitespace-pre-wrap\">{item.question}</span>\n                    <Plus className=\"size-[28px] shrink-0 text-catlife-primary transition-transform duration-200\" />\n                  </AccordionTrigger>\n                  <AccordionContent className=\"font-roc-grotesk text-base font-normal text-catlife-text-secondary\">\n                    {item.answer}\n                  </AccordionContent>\n                </AccordionItem>\n              ))}\n            </Accordion>\n          </div>\n        </div>\n      </section>\n    );\n  },\n);\n\nCatlifeFAQ.displayName = \"CatlifeFAQ\";\n\nexport { CatlifeFAQ };\n\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "src/layouts/minimal-layout.tsx",
+      "content": "import { Geist, Geist_Mono, Montserrat } from \"next/font/google\";\nimport React, { type ReactNode } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nimport \"@/app/globals.css\";\n\nconst GeistSans = Geist({\n  subsets: [\"latin\"],\n  variable: \"--font-sans\",\n});\n\nconst GeistMono = Geist_Mono({\n  subsets: [\"latin\"],\n  variable: \"--font-mono\",\n});\n\nconst MontserratSerif = Montserrat({\n  subsets: [\"latin\"],\n  variable: \"--font-serif\",\n});\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: ReactNode;\n}>) {\n  return (\n    <html\n      lang=\"en\"\n      className={cn(\n        GeistSans.variable,\n        GeistMono.variable,\n        MontserratSerif.variable,\n        \"bg-background text-foreground\",\n      )}\n    >\n      <body>\n        <main className=\"mt-16 flex w-full justify-center\">\n          <div className=\"container\">{children}</div>\n        </main>\n      </body>\n    </html>\n  );\n}\n",
+      "type": "registry:file",
+      "target": "app/layout.tsx"
+    }
+  ]
 }

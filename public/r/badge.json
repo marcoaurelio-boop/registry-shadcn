@@ -6,7 +6,7 @@
   "description": "Displays a small count or status indicator.",
   "registryDependencies": [
     "badge",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {

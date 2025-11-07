@@ -5,7 +5,19 @@
   "title": "Catlife Testimonials",
   "description": "A testimonials section with banner ribbon and testimonial cards.",
   "registryDependencies": [
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
-  "files": []
+  "files": [
+    {
+      "path": "src/components/ui/catlife-testimonials.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface Testimonial {\n  text: string;\n  author: string;\n  avatar?: string;\n}\n\nexport interface CatlifeTestimonialsProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  bannerText?: string;\n  testimonials?: Testimonial[];\n}\n\nconst CatlifeTestimonials = React.forwardRef<\n  HTMLDivElement,\n  CatlifeTestimonialsProps\n>(\n  (\n    {\n      className,\n      bannerText = \"Mais de 10.000 gatos protegidos\",\n      testimonials = [],\n      ...props\n    },\n    ref,\n  ) => {\n    return (\n      <section\n        ref={ref}\n        className={cn(\"bg-catlife-background-alt py-24\", className)}\n        {...props}\n      >\n        {/* Banner Ribbon */}\n        {bannerText && (\n          <div className=\"mb-16 flex items-center justify-center\">\n            <div\n              className=\"flex items-center justify-center border-[1.572px] border-catlife-border bg-catlife-primary px-8 py-4\"\n              style={{ transform: \"rotate(9.187deg)\" }}\n            >\n              <p className=\"font-roc-grotesk text-[46px] font-medium leading-normal text-catlife-text-primary\">\n                {bannerText}\n              </p>\n            </div>\n          </div>\n        )}\n\n        {/* Testimonials Grid */}\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-3\">\n          {testimonials.map((testimonial, index) => (\n            <div\n              key={index}\n              className=\"flex flex-col items-center gap-4 rounded-full\"\n            >\n              <div className=\"size-[172px] rounded-full bg-catlife-surface\" />\n              <p className=\"font-roc-grotesk text-[23px] font-normal leading-normal text-catlife-text-primary text-center\">\n                {testimonial.text}\n              </p>\n              <p className=\"font-roc-grotesk text-[23px] font-medium leading-normal text-catlife-text-primary\">\n                {testimonial.author}\n              </p>\n            </div>\n          ))}\n        </div>\n      </section>\n    );\n  },\n);\n\nCatlifeTestimonials.displayName = \"CatlifeTestimonials\";\n\nexport { CatlifeTestimonials };\n\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "src/layouts/minimal-layout.tsx",
+      "content": "import { Geist, Geist_Mono, Montserrat } from \"next/font/google\";\nimport React, { type ReactNode } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nimport \"@/app/globals.css\";\n\nconst GeistSans = Geist({\n  subsets: [\"latin\"],\n  variable: \"--font-sans\",\n});\n\nconst GeistMono = Geist_Mono({\n  subsets: [\"latin\"],\n  variable: \"--font-mono\",\n});\n\nconst MontserratSerif = Montserrat({\n  subsets: [\"latin\"],\n  variable: \"--font-serif\",\n});\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: ReactNode;\n}>) {\n  return (\n    <html\n      lang=\"en\"\n      className={cn(\n        GeistSans.variable,\n        GeistMono.variable,\n        MontserratSerif.variable,\n        \"bg-background text-foreground\",\n      )}\n    >\n      <body>\n        <main className=\"mt-16 flex w-full justify-center\">\n          <div className=\"container\">{children}</div>\n        </main>\n      </body>\n    </html>\n  );\n}\n",
+      "type": "registry:file",
+      "target": "app/layout.tsx"
+    }
+  ]
 }

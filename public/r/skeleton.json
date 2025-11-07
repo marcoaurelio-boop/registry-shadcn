@@ -6,7 +6,7 @@
   "description": "Use to show a placeholder while content is loading.",
   "registryDependencies": [
     "skeleton",
-    "https://registry-starter.vercel.app/r/theme.json"
+    "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
     {
