@@ -5,42 +5,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Standard shadcn tokens - converted to OKLCH, matching Figma values */
-  --background: oklch(0.985 0.01 80); /* #fffaf3 */
-  --foreground: oklch(0.15 0 0); /* #161616 */
-  --card: oklch(0.985 0.01 80); /* #fffaf3 */
-  --card-foreground: oklch(0.15 0 0); /* #161616 */
-  --popover: oklch(0.985 0.01 80); /* #fffaf3 */
-  --popover-foreground: oklch(0.15 0 0); /* #161616 */
-  --primary: oklch(0.65 0.15 70); /* #f99830 */
-  --primary-foreground: oklch(0.15 0 0); /* #161616 */
-  --secondary: oklch(0.88 0.08 75); /* #ffd094 */
-  --secondary-foreground: oklch(0.15 0 0); /* #161616 */
-  --muted: oklch(0.96 0.02 80); /* #ffeed6 */
-  --muted-foreground: oklch(0.15 0 0); /* #161616 */
-  --accent: oklch(0.88 0.08 75); /* #ffd094 */
-  --accent-foreground: oklch(0.15 0 0); /* #161616 */
-  --destructive: oklch(0.60 0.22 25); /* #ef4444 */
-  --destructive-foreground: oklch(1 0 0); /* #ffffff */
-  --border: oklch(0.15 0 0); /* #161616 */
-  --input: oklch(0.15 0 0); /* #161616 */
-  --ring: oklch(0.65 0.15 70); /* #f99830 */
-  --chart-1: oklch(0.65 0.15 70); /* #f99830 */
-  --chart-2: oklch(0.65 0.15 70); /* #f99830 */
-  --chart-3: oklch(0.58 0.18 60); /* #f27100 */
-  --chart-4: oklch(0.65 0.20 165); /* #10b981 */
-  --chart-5: oklch(0.88 0.08 75); /* #ffd094 */
+  --background: #fffaf3;
+  --foreground: #161616;
+  --card: #fffaf3;
+  --card-foreground: #161616;
+  --popover: #fffaf3;
+  --popover-foreground: #161616;
+  --primary: #f99830;
+  --primary-foreground: #161616;
+  --secondary: #ffd094;
+  --secondary-foreground: #161616;
+  --muted: #ffeed6;
+  --muted-foreground: #161616;
+  --accent: #ffd094;
+  --accent-foreground: #161616;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #161616;
+  --input: #161616;
+  --ring: #f99830;
+  --chart-1: oklch(0.65 0.15 70);
+  --chart-2: oklch(0.65 0.15 70);
+  --chart-3: oklch(0.58 0.18 60);
+  --chart-4: oklch(0.65 0.20 165);
+  --chart-5: oklch(0.88 0.08 75);
   --radius: 1.5rem;
-  --sidebar: oklch(0.985 0.01 80); /* #fffaf3 */
-  --sidebar-foreground: oklch(0.15 0 0); /* #161616 */
-  --sidebar-primary: oklch(0.65 0.15 70); /* #f99830 */
-  --sidebar-primary-foreground: oklch(0.15 0 0); /* #161616 */
-  --sidebar-accent: oklch(0.96 0.02 80); /* #ffeed6 */
-  --sidebar-accent-foreground: oklch(0.15 0 0); /* #161616 */
-  --sidebar-border: oklch(0.15 0 0); /* #161616 */
-  --sidebar-ring: oklch(0.65 0.15 70); /* #f99830 */
+  --sidebar: oklch(0.985 0.01 80);
+  --sidebar-foreground: oklch(0.15 0 0);
+  --sidebar-primary: oklch(0.65 0.15 70);
+  --sidebar-primary-foreground: oklch(0.15 0 0);
+  --sidebar-accent: oklch(0.96 0.02 80);
+  --sidebar-accent-foreground: oklch(0.15 0 0);
+  --sidebar-border: oklch(0.15 0 0);
+  --sidebar-ring: oklch(0.65 0.15 70);
 
-  /* Custom Catlife tokens - using hex colors directly from Figma */
   --catlife-background: #fffaf3;
   --catlife-background-alt: #ffeed6;
   --catlife-surface: #fffaf3;
@@ -62,7 +60,6 @@
 }
 
 .dark {
-  /* Standard shadcn tokens - dark mode */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
@@ -96,7 +93,6 @@
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
 
-  /* Custom Catlife tokens - dark mode */
   --catlife-background: oklch(0.145 0 0);
   --catlife-background-alt: oklch(0.205 0 0);
   --catlife-surface: oklch(0.145 0 0);
@@ -118,7 +114,6 @@
 }
 
 @theme inline {
-  /* Standard shadcn tokens mapped for Tailwind */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -156,7 +151,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom Catlife tokens mapped for Tailwind */
   --color-catlife-background: var(--catlife-background);
   --color-catlife-background-alt: var(--catlife-background-alt);
   --color-catlife-surface: var(--catlife-surface);
@@ -187,7 +181,6 @@
     font-family: var(--font-sans), sans-serif;
   }
 
-  /* Font family utilities */
   .font-roc-grotesk {
     font-family: var(--font-sans), "Roc Grotesk", sans-serif;
   }
@@ -197,12 +190,7 @@
   }
 }
 
-/* ============================================
-   Catlife Component Layer
-   ============================================ */
-
 @layer components {
-  /* Catlife Button - Primary CTA with shadow effects */
   .catlife-btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full border-none bg-primary px-6 py-3 font-semibold text-base text-primary-foreground transition-all duration-300;
     box-shadow: 0 2px 8px rgba(244, 152, 52, 0.3);
@@ -219,7 +207,6 @@
     box-shadow: 0 1px 4px rgba(244, 152, 52, 0.3);
   }
 
-  /* Catlife Button Sizes */
   .catlife-btn-sm {
     @apply px-4 py-2 text-sm;
   }
@@ -228,7 +215,6 @@
     @apply px-8 py-4 text-lg;
   }
 
-  /* Catlife Card - Article/Content cards */
   .catlife-card {
     @apply cursor-pointer overflow-hidden rounded-2xl bg-card transition-transform duration-300 hover:scale-[1.02];
   }
@@ -246,7 +232,6 @@
     @apply flex flex-col gap-3 p-4;
   }
 
-  /* Catlife Featured Card - Hero article */
   .catlife-featured-card {
     @apply grid grid-cols-1 items-center gap-8 md:grid-cols-2;
   }
@@ -256,12 +241,10 @@
     aspect-ratio: 4 / 3;
   }
 
-  /* Catlife Category Tag */
   .catlife-category {
     @apply inline-block text-sm font-medium uppercase tracking-wider text-primary;
   }
 
-  /* Catlife Section - Large rounded sections */
   .catlife-section {
     @apply rounded-3xl p-12;
   }
@@ -271,7 +254,6 @@
     background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
   }
 
-  /* Catlife Header */
   .catlife-header {
     @apply border-b;
     border-bottom-color: color-mix(in srgb, var(--color-foreground) 10%, transparent);
@@ -285,23 +267,17 @@
     @apply cursor-pointer border-none bg-none text-base text-foreground transition-colors duration-200 hover:text-primary;
   }
 
-  /* Catlife Footer */
   .catlife-footer {
     @apply mt-16 py-6;
     background-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
   }
 
-  /* Pill Container - Glassmorphism style */
   .catlife-pill {
     @apply rounded-full px-6 py-3 shadow-sm backdrop-blur-md;
     border: 1px solid color-mix(in srgb, var(--color-foreground) 10%, transparent);
     background-color: rgba(255, 255, 255, 0.8);
   }
 }
-
-/* ============================================
-   Catlife Utility Layer
-   ============================================ */
 
 @layer utilities {
   .text-balance {
@@ -312,7 +288,6 @@
     text-wrap: pretty;
   }
 
-  /* Catlife Shadow Utilities */
   .shadow-catlife-default {
     box-shadow: 2px 2px 0px 0px rgba(22, 22, 22, 1);
   }
@@ -325,7 +300,6 @@
     box-shadow: 1px 1px 0px 0px rgba(22, 22, 22, 1);
   }
 
-  /* Catlife CTA Shadow Utilities - Enhanced emphasis */
   .shadow-catlife-cta-default {
     box-shadow: 3px 3px 0px 0px rgba(22, 22, 22, 1);
   }
@@ -338,7 +312,6 @@
     box-shadow: 2px 2px 0px 0px rgba(22, 22, 22, 1);
   }
 
-  /* Catlife Dark Shadow Utilities - Orange color scheme */
   .shadow-catlife-dark-default {
     box-shadow: 2px 2px 0px 0px rgba(249, 152, 48, 1);
   }

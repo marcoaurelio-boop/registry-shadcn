@@ -29,9 +29,11 @@ const CatlifePlansCarousel = React.forwardRef<
           <div
             key={index}
             className={cn(
-              "flex flex-col gap-6 border bg-catlife-primary p-8 transition-all",
-              "opacity-40 border-[1.023px] rounded-[32.722px]",
-              "data-[active=true]:opacity-100 data-[active=true]:border-[1.278px] data-[active=true]:rounded-[40.902px] data-[active=true]:p-10",
+              "flex flex-col gap-6 border-2 border-catlife-border bg-catlife-primary p-8 transition-all duration-200 ease-in-out",
+              "opacity-40 rounded-[32.722px] shadow-catlife-default",
+              "hover:shadow-catlife-hover hover:-translate-x-[1px] hover:-translate-y-[1px]",
+              "active:shadow-catlife-active active:translate-x-[1px] active:translate-y-[1px]",
+              "data-[active=true]:opacity-100 data-[active=true]:rounded-[40.902px] data-[active=true]:p-10",
             )}
           >
             <div className="flex flex-col gap-4">
