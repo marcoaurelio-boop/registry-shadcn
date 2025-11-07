@@ -324,4 +324,30 @@
   .shadow-catlife-active {
     box-shadow: 1px 1px 0px 0px rgba(22, 22, 22, 1);
   }
+
+  /* Catlife CTA Shadow Utilities - Enhanced emphasis */
+  .shadow-catlife-cta-default {
+    box-shadow: 3px 3px 0px 0px rgba(22, 22, 22, 1);
+  }
+
+  .shadow-catlife-cta-hover {
+    box-shadow: 4px 4px 0px 0px rgba(22, 22, 22, 1);
+  }
+
+  .shadow-catlife-cta-active {
+    box-shadow: 2px 2px 0px 0px rgba(22, 22, 22, 1);
+  }
+
+  /* Catlife Dark Shadow Utilities - Orange color scheme */
+  .shadow-catlife-dark-default {
+    box-shadow: 2px 2px 0px 0px rgba(249, 152, 48, 1);
+  }
+
+  .shadow-catlife-dark-hover {
+    box-shadow: 3px 3px 0px 0px rgba(249, 152, 48, 1);
+  }
+
+  .shadow-catlife-dark-active {
+    box-shadow: 1px 1px 0px 0px rgba(242, 113, 0, 1);
+  }
 }

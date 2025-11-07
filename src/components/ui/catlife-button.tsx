@@ -10,8 +10,8 @@ const catlifeButtonVariants = cva(
       variant: {
         primary:
           "bg-catlife-surface text-catlife-text-primary border-catlife-border shadow-catlife-default hover:shadow-catlife-hover hover:-translate-x-[1px] hover:-translate-y-[1px] active:shadow-catlife-active active:translate-x-[1px] active:translate-y-[1px]",
-        cta: "bg-catlife-primary text-catlife-text-primary border border-catlife-border text-[20px] shadow-catlife-default hover:bg-catlife-primary-hover hover:shadow-catlife-hover hover:-translate-x-[1px] hover:-translate-y-[1px] active:bg-catlife-primary-active active:shadow-catlife-active active:translate-x-[1px] active:translate-y-[1px]",
-        dark: "bg-catlife-text-primary text-catlife-text-inverse border-catlife-primary shadow-[2px_2px_0px_0px_rgba(249,152,48,1)] hover:border-catlife-primary-hover hover:shadow-[3px_3px_0px_0px_rgba(249,152,48,1)] hover:-translate-x-[1px] hover:-translate-y-[1px] active:border-catlife-primary-active active:shadow-[1px_1px_0px_0px_rgba(242,113,0,1)] active:translate-x-[1px] active:translate-y-[1px]",
+        cta: "bg-catlife-primary text-catlife-text-primary border-catlife-border text-[20px] shadow-catlife-cta-default hover:bg-catlife-primary-hover hover:shadow-catlife-cta-hover hover:-translate-x-[1px] hover:-translate-y-[1px] active:bg-catlife-primary-active active:shadow-catlife-cta-active active:translate-x-[1px] active:translate-y-[1px]",
+        dark: "bg-catlife-text-primary text-catlife-text-inverse border-catlife-primary shadow-catlife-dark-default hover:border-catlife-primary-hover hover:shadow-catlife-dark-hover hover:-translate-x-[1px] hover:-translate-y-[1px] active:border-catlife-primary-active active:shadow-catlife-dark-active active:translate-x-[1px] active:translate-y-[1px]",
       },
       size: {
         default: "h-12 px-8 py-3 rounded-full",
