@@ -5,7 +5,6 @@
   "title": "Catlife Carousel",
   "description": "An interactive carousel component with smooth animations and pagination dots.",
   "registryDependencies": [
-    "catlife-carousel",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [

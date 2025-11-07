@@ -18,16 +18,20 @@ export default async function DemoPage({
 }) {
   const { name } = await params;
 
-  const component = getRegistryItem(name);
-
-  if (!component) {
-    notFound();
-  }
-
   const demo = demos[name];
   if (!demo) {
     notFound();
   }
+
+  // Try to get registry item, but don't fail if it doesn't exist (demo-only components)
+  let component;
+  try {
+    component = getRegistryItem(name);
+  } catch {
+    // Component not in registry, but exists in demos - that's okay
+    component = null;
+  }
+
   const { components } = demo;
 
   return (
@@ -41,3 +45,4 @@ export default async function DemoPage({
     </div>
   );
 }
+

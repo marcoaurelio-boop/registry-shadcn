@@ -5,10 +5,14 @@
   "title": "Pill Container",
   "description": "A glassmorphism-style container with rounded pill shape for floating UI elements.",
   "registryDependencies": [
-    "pill-container",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
+    {
+      "path": "src/components/ui/pill-container.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface PillContainerProps extends React.HTMLAttributes<HTMLDivElement> {\n  children: React.ReactNode\n}\n\nconst PillContainer = React.forwardRef<HTMLDivElement, PillContainerProps>(({ className, children, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\n        \"flex items-center justify-between\",\n        \"bg-catlife-background/80\",\n        \"backdrop-blur-xl backdrop-saturate-150\",\n        \"border-2 border-white/60\",\n        \"rounded-full\",\n        \"px-6 py-3\",\n        \"w-full\",\n        \"gap-4\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </div>\n  )\n})\n\nPillContainer.displayName = \"PillContainer\"\n\nexport { PillContainer }\n",
+      "type": "registry:component"
+    },
     {
       "path": "src/layouts/minimal-layout.tsx",
       "content": "import { Geist, Geist_Mono, Montserrat } from \"next/font/google\";\nimport React, { type ReactNode } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nimport \"@/app/globals.css\";\n\nconst GeistSans = Geist({\n  subsets: [\"latin\"],\n  variable: \"--font-sans\",\n});\n\nconst GeistMono = Geist_Mono({\n  subsets: [\"latin\"],\n  variable: \"--font-mono\",\n});\n\nconst MontserratSerif = Montserrat({\n  subsets: [\"latin\"],\n  variable: \"--font-serif\",\n});\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: ReactNode;\n}>) {\n  return (\n    <html\n      lang=\"en\"\n      className={cn(\n        GeistSans.variable,\n        GeistMono.variable,\n        MontserratSerif.variable,\n        \"bg-background text-foreground\",\n      )}\n    >\n      <body>\n        <main className=\"mt-16 flex w-full justify-center\">\n          <div className=\"container\">{children}</div>\n        </main>\n      </body>\n    </html>\n  );\n}\n",

@@ -3,7 +3,7 @@
   "name": "date-picker",
   "type": "registry:ui",
   "title": "Date Picker",
-  "description": "Displays the path to the current resource using a hierarchy of links.",
+  "description": "A date field component that allows users to enter and edit dates.",
   "dependencies": [
     "react-day-picker",
     "date-fns"

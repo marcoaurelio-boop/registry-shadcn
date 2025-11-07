@@ -7,10 +7,13 @@ export function CatlifeNavbarComponent() {
     <div className="w-full">
       <CatlifeNavbar
         logo={
-          <div className="flex items-center">
-            <span className="font-roc-grotesk text-xl font-bold text-catlife-text-primary">
-              CatLife
-            </span>
+          <div className="flex items-center justify-center">
+            {/* Logo placeholder - replace with actual logo image */}
+            <div className="flex h-8 w-32 items-center justify-center rounded bg-catlife-primary/20">
+              <span className="font-roc-grotesk text-lg font-bold text-catlife-text-primary">
+                CatLife
+              </span>
+            </div>
           </div>
         }
         menuItems={[

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { CatlifeHero } from "@/components/ui/catlife-hero";

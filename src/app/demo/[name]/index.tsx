@@ -52,6 +52,7 @@ import { CatlifeFooterComponent } from "@/app/demo/[name]/ui/catlife-footer";
 import { CatlifeHeroComponent } from "@/app/demo/[name]/ui/catlife-hero";
 import { CatlifeInfoCardComponent } from "@/app/demo/[name]/ui/catlife-info-card";
 import { CatlifeNavbarComponent } from "@/app/demo/[name]/ui/catlife-navbar";
+import { CatlifeNavbarHeroComponent } from "@/app/demo/[name]/ui/catlife-navbar-hero";
 import { CatlifePlansCarouselComponent } from "@/app/demo/[name]/ui/catlife-plans-carousel";
 import { CatlifeTelemedicineComponent } from "@/app/demo/[name]/ui/catlife-telemedicine";
 import { CatlifeTestimonialsComponent } from "@/app/demo/[name]/ui/catlife-testimonials";
@@ -160,6 +161,12 @@ export const demos: { [name: string]: Demo } = {
     name: "catlife-navbar",
     components: {
       Example: <CatlifeNavbarComponent />,
+    },
+  },
+  "catlife-navbar-hero": {
+    name: "catlife-navbar-hero",
+    components: {
+      Example: <CatlifeNavbarHeroComponent />,
     },
   },
   "catlife-plans-carousel": {

@@ -5,8 +5,8 @@
   "title": "Catlife Plans Carousel",
   "description": "A carousel component for displaying insurance plans with active/inactive states.",
   "registryDependencies": [
-    "catlife-button",
-    "catlife-carousel",
+    "https://registry-shadcn.vercel.app/r/catlife-button.json",
+    "https://registry-shadcn.vercel.app/r/catlife-carousel.json",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [

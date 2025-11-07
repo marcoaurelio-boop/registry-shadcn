@@ -5,7 +5,7 @@
   "title": "Catlife Telemedicine",
   "description": "A section component for telemedicine information with image and CTA.",
   "registryDependencies": [
-    "catlife-button",
+    "https://registry-shadcn.vercel.app/r/catlife-button.json",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [

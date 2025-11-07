@@ -13,6 +13,7 @@ export interface CatlifeHeroProps extends React.HTMLAttributes<HTMLDivElement> {
   inputPlaceholder?: string;
   ctaLabel?: string;
   onCtaClick?: () => void;
+  hasNavbar?: boolean;
 }
 
 const CatlifeHero = React.forwardRef<HTMLDivElement, CatlifeHeroProps>(
@@ -26,6 +27,7 @@ const CatlifeHero = React.forwardRef<HTMLDivElement, CatlifeHeroProps>(
       inputPlaceholder = "Nome do seu pet",
       ctaLabel = "Vamos lá",
       onCtaClick,
+      hasNavbar = false,
       ...props
     },
     ref,
@@ -34,7 +36,8 @@ const CatlifeHero = React.forwardRef<HTMLDivElement, CatlifeHeroProps>(
       <section
         ref={ref}
         className={cn(
-          "flex w-full flex-wrap items-start gap-5 bg-catlife-primary-light px-14 py-15 overflow-hidden",
+          "relative flex w-full flex-wrap items-start gap-5 bg-catlife-primary-light px-14 py-15 overflow-hidden",
+          hasNavbar && "pt-32",
           className,
         )}
         {...props}

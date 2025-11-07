@@ -5,7 +5,6 @@
   "title": "Catlife Card",
   "description": "A custom card component with Catlife styling and rounded corners.",
   "registryDependencies": [
-    "catlife-card",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [

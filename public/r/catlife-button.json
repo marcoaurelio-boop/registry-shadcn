@@ -5,7 +5,6 @@
   "title": "Catlife Button",
   "description": "A custom button component with Catlife branding and interactive shadow effects.",
   "registryDependencies": [
-    "catlife-button",
     "https://registry-shadcn.vercel.app/r/theme.json"
   ],
   "files": [
