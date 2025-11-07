@@ -91,6 +91,26 @@
           "path": "postcss.config.mjs",
           "type": "registry:file",
           "target": "postcss.config.mjs"
+        },
+        {
+          "path": "public/fonts/fonnts.com-Roc_Grotesk_Regular.otf",
+          "type": "registry:file",
+          "target": "public/fonts/fonnts.com-Roc_Grotesk_Regular.otf"
+        },
+        {
+          "path": "public/fonts/fonnts.com-Roc_Grotesk_Medium.otf",
+          "type": "registry:file",
+          "target": "public/fonts/fonnts.com-Roc_Grotesk_Medium.otf"
+        },
+        {
+          "path": "public/fonts/fonnts.com-Roc_Grotesk_Bold.otf",
+          "type": "registry:file",
+          "target": "public/fonts/fonnts.com-Roc_Grotesk_Bold.otf"
+        },
+        {
+          "path": "public/fonts/fonnts.com-Roc_Grotesk_ExtraBold.otf",
+          "type": "registry:file",
+          "target": "public/fonts/fonnts.com-Roc_Grotesk_ExtraBold.otf"
         }
       ]
     },

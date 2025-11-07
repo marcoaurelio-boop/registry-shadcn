@@ -172,6 +172,65 @@
 }
 
 @layer base {
+  /* ============================================
+     Roc Grotesk Font Face Declarations
+     ============================================
+
+     Font Weight Mapping:
+     - font-weight: 400 (font-normal) → Regular.otf
+       Usage: Body text, paragraphs, descriptions
+       Components: catlife-footer, catlife-info-card, catlife-faq content
+
+     - font-weight: 500 (font-medium) → Medium.otf
+       Usage: Headings (H2, H3), navigation items, table headers
+       Components: catlife-hero subtitle, catlife-navbar, catlife-faq heading, catlife-telemedicine heading
+
+     - font-weight: 700 (font-bold) → Bold.otf
+       Usage: Buttons, hero titles, emphasis, prices
+       Components: catlife-button (all variants), catlife-hero title, catlife-plans-carousel price
+
+     - font-weight: 800 (font-extrabold) → ExtraBold.otf
+       Usage: Strong emphasis (if needed)
+       Components: Currently unused, available for future use
+
+     Tailwind Classes:
+     - font-normal = 400 → Regular.otf
+     - font-medium = 500 → Medium.otf
+     - font-bold = 700 → Bold.otf
+     - font-extrabold = 800 → ExtraBold.otf
+  */
+  @font-face {
+    font-family: "Roc Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/fonnts.com-Roc_Grotesk_Regular.otf") format("opentype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roc Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/fonnts.com-Roc_Grotesk_Medium.otf") format("opentype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roc Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/fonnts.com-Roc_Grotesk_Bold.otf") format("opentype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roc Grotesk";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/fonnts.com-Roc_Grotesk_ExtraBold.otf") format("opentype");
+    font-display: swap;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -182,7 +241,7 @@
   }
 
   .font-roc-grotesk {
-    font-family: var(--font-sans), "Roc Grotesk", sans-serif;
+    font-family: "Roc Grotesk", var(--font-sans), sans-serif;
   }
 
   .font-lato {
